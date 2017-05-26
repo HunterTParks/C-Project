@@ -5,10 +5,9 @@
 <div class = "container">
   <p>
     You have successfully created a contact!!!!
-    @foreach(var newContact in Model)
-    {
-      <p>@Model.GetName()</p>
-    }
+    <p>@Model.GetName()</p>
+    <p>@Model.GetAddress()</p>
+    <p>@Model.GetNumber()</p>
     <p><a href = "/">Click here to go back!</a></p>
   </p>
 </div>
