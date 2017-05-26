@@ -37,7 +37,8 @@ OR the user can...
 * Enjoy!
 
 ## Known Bugs
-Styling currently has an issue with formatting
+* Styling currently has an issue with formatting
+* When displaying names on index.cshtml, will display 2 empty hyperlinks per 1 non-empty hyperlink that you cannot see. Only visible if you put CSS style borders around 'a' tags.
 
 ## Support
 If you have any problems at all, feel free to email me at hunter.thomas.parks@gmail.com
