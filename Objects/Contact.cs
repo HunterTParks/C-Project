@@ -14,7 +14,6 @@ namespace Contact.Object
       _name = newName;
       _number = newNumber;
       _address = newAddress;
-      _allContacts.add(this);
     }
 
     public string GetName()
@@ -32,6 +31,10 @@ namespace Contact.Object
     public static List<Contact> GetAll()
     {
       return _allContacts;
+    }
+    public void AddToList()
+    {
+      _allContacts.Add(this);
     }
   }
 }
