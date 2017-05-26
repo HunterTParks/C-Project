@@ -35,3 +35,22 @@ OR the user can...
 * Run command 'dnx kestrel'
 * In a web browser, navigate to the URL 'localhost:5004'
 * Enjoy!
+
+## Known Bugs
+Doesn't Currently work; Will proceed to update as application goes along
+
+## Support
+If you have any problems at all, feel free to email me at hunter.thomas.parks@gmail.com
+
+## Technologies Used
+* HTML
+* BOOTSTRAP
+* C#
+* RAZOR
+* NANCY
+
+# LICENSE
+
+## THIS SOFTWARE IS LICENSED UNDER THE MIT LICENSE
+
+#### COPYRIGHT (c) 2017 **_HUNTER PARKS_**
