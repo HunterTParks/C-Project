@@ -37,7 +37,7 @@ OR the user can...
 * Enjoy!
 
 ## Known Bugs
-Doesn't Currently work; Will proceed to update as application goes along
+Styling currently has an issue with formatting
 
 ## Support
 If you have any problems at all, feel free to email me at hunter.thomas.parks@gmail.com
