@@ -1,31 +1,39 @@
 @{
-Layout = "Shared/_Layout";
+  Layout = "Shared/_Layout";
 }
 
-<div id = "intro">
+<div class = "styling">
   <div class = "jumbotron">
     <h4>
-      Welcome to "Building your address book"!
+      Welcome to your address book!
     </h4>
   </div>
 
-  <p><a href = "/contacts">Make a new contact</a></p>
+  <div class = "row">
+    <div class = "col-md-4">
 
-  <h2>Here are your current contacts</h2>
+      <p><a href = "/contacts">Make a new contact</a></p>
+    </div>
 
-  @if(@Model.Count <= 0)
-  {
-    <p>You currently have no contacts!</p>
-  } else {
-    @foreach(var Contact in Model)
-    {
-      <p><a href = "/contacts/@Contact.GetId()"</a>@Contact.GetName()</p>
-    }
-  }
+    <div class = "col-md-6">
 
-  <p>
-    <form action="/contents/cleared" method="post">
-      <button type = "submit" class = "btn btn-info"><span>Clear all Contacts</span></button>
-    </form>
-  </p>
+      <h2>Here are your current contacts</h2>
+
+      @if(@Model.Count <= 0)
+      {
+        <p>You currently have no contacts!</p>
+      } else {
+        @foreach(var Contact in Model)
+        {
+          <p><a href = "/contacts/@Contact.GetId()"</a>@Contact.GetName()</p>
+        }
+      }
+
+      <p>
+        <form action="/contents/cleared" method="post">
+          <button type = "submit" class = "btn btn-info"><span>Clear all Contacts</span></button>
+        </form>
+      </p>
+    </div>
+  </div>
 </div>
