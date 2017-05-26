@@ -1,7 +1,7 @@
 using Nancy;
 using System.Collections.Generic;
 
-namespace project
+namespace Contact
 {
   public class HomeModule : NancyModule
   {
