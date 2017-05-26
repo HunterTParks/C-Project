@@ -1,0 +1,10 @@
+@{
+  Layout = "Shared/_Layout";
+}
+
+<div class = "container">
+  @foreach(string test in @model["tasks"])
+  {
+    <p>@test</p>
+  }
+</div>
