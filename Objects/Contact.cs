@@ -9,7 +9,7 @@ namespace Contact.Object
     private string _address;
     private static List<Contact> _allContacts = new List<Contact> {};
     private int _id;
-    private List<string> _contactInfo = new List<string>();
+    private static List<string> _contactInfo = new List<string>();
 
     public Contact(string newName, string newNumber, string newAddress)
     {
@@ -37,6 +37,10 @@ namespace Contact.Object
     public static List<Contact> GetAll()
     {
       return _allContacts;
+    }
+    public int GetId()
+    {
+      return _id;
     }
     public static Contact Find(int searchId)
     {

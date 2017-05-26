@@ -20,7 +20,7 @@ namespace Contact.Object
       };
       Get["/contacts/{id}"] = parameters => {
         Dictionary<string, object> model = new Dictionary<string, object>();
-        Contact selectedContact = Contact.Find(1);
+        Contact selectedContact = Contact.Find(parameters.id);
         List<string> contactInformation = Contact.GetInfo();
         model.Add("contact", selectedContact);
         model.Add("contactinformation", contactInformation);

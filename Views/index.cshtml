@@ -17,7 +17,7 @@
   } else {
     @foreach(var Contact in Model)
     {
-      <p><a href = "/contacts/{id}>"</a>@Contact.GetName()</p>
+      <p><a href = "/contacts/@Contact.GetId()"</a>@Contact.GetName()</p>
     }
   }
   @* @foreach(car contact in Model)
