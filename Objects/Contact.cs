@@ -53,7 +53,7 @@ namespace Contact.Object
     public static void ClearAll()
     {
       _allContacts.Clear();
-      
+
     }
   }
 }
