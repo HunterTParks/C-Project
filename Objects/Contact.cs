@@ -7,12 +7,14 @@ namespace Contact.Object
     private string _name;
     private string _number;
     private string _address;
+    private static List<Contact> _allContacts = new List<Contact> {};
 
     public Contact(string newName, string newNumber, string newAddress)
     {
       _name = newName;
       _number = newNumber;
       _address = newAddress;
+      _allContacts.add(this);
     }
 
     public string GetName()
