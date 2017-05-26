@@ -8,7 +8,7 @@ namespace Contact.Object
     public HomeModule()
     {
       Get["/"] = _ => {
-        return View["index.cshtml"];
+        return View["index.cshtml", Contact.GetAll()];
       };
       Get["/new"] = _ => {
         return View["contact_form.cshtml"];
