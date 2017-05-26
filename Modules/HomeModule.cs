@@ -1,6 +1,7 @@
 using Nancy;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Contact.Object;
 
 namespace Contact.Object
 {
@@ -11,7 +12,7 @@ namespace Contact.Object
       Get["/"] = _ => {
         return View["index.cshtml", Contact.GetAll()];
       };
-      Get["/new"] = _ => {
+      Get["/contacts"] = _ => {
         return View["contact_form.cshtml"];
       };
       Post["/contacts/new"] = _ => {
@@ -21,10 +22,14 @@ namespace Contact.Object
       Get["/contacts/{id}"] = parameters => {
         Dictionary<string, object> model = new Dictionary<string, object>();
         Contact selectedContact = Contact.Find(parameters.id);
-        List<string> contactInformation = Contact.GetInfo();
+        List<string> contactInformation = selectedContact.GetInfo();
         model.Add("contact", selectedContact);
         model.Add("contactinformation", contactInformation);
         return View["contact_view.cshtml", model];
+      };
+      Post["/contents/cleared"] = _ => {
+        Contact.ClearAll();
+        return View["cleared.cshtml"];
       };
     }
   }

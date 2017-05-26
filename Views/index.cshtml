@@ -7,7 +7,7 @@
     Welcome to "Building your address book"!
   </p>
 
-  <p><a href = "/new">Make a new contact</a></p>
+  <p><a href = "/contacts">Make a new contact</a></p>
 
   <h2>Here are your current contacts</h2>
 
@@ -20,8 +20,10 @@
       <p><a href = "/contacts/@Contact.GetId()"</a>@Contact.GetName()</p>
     }
   }
-  @* @foreach(car contact in Model)
-  {
 
-  } *@
+  <p>
+    <form action="/contents/cleared" method="post">
+      <button type = "submit" class = "btn btn-info">Clear all Contacts</button>
+    </form>
+  </p>
 </div>
