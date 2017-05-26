@@ -2,13 +2,9 @@
   Layout = "Shared/_Layout";
 }
 
-<div class = "container">
-  @foreach(var info in @Model["contactinformation"])
-  {
-    <p>@info</p>
-  }
+@foreach(var info in @Model["contactinformation"])
+{
+  <p>@info</p>
+}
 
-
-
-  <p><a href = "/">Click here to go back!</a></p>
-</div>
+<p><a href = "/">Click here to go back!</a></p>

@@ -1,11 +1,13 @@
 @{
-  Layout = "Shared/_Layout";
+Layout = "Shared/_Layout";
 }
 
-<div class = "container">
-  <p>
-    Welcome to "Building your address book"!
-  </p>
+<div id = "intro">
+  <div class = "jumbotron">
+    <h4>
+      Welcome to "Building your address book"!
+    </h4>
+  </div>
 
   <p><a href = "/contacts">Make a new contact</a></p>
 
@@ -23,7 +25,7 @@
 
   <p>
     <form action="/contents/cleared" method="post">
-      <button type = "submit" class = "btn btn-info">Clear all Contacts</button>
+      <button type = "submit" class = "btn btn-info"><span>Clear all Contacts</span></button>
     </form>
   </p>
 </div>
