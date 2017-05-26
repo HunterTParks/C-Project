@@ -1,5 +1,6 @@
 using Nancy;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Contact.Object
 {
@@ -19,7 +20,7 @@ namespace Contact.Object
       };
       Get["/contacts/{id}"] = parameters => {
         Dictionary<string, object> model = new Dictionary<string, object>();
-        Contact selectedContact = Contact.Find(parameters.id);
+        Contact selectedContact = Contact.Find(1);
         List<string> contactInformation = Contact.GetInfo();
         model.Add("contact", selectedContact);
         model.Add("contactinformation", contactInformation);
