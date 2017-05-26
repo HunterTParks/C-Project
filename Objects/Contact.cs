@@ -9,13 +9,15 @@ namespace Contact.Object
     private string _address;
     private static List<Contact> _allContacts = new List<Contact> {};
     private int _id;
-    private List<string> _contactInfo;
+    private static List<string> _contactInfo = new List<string>();
 
     public Contact(string newName, string newNumber, string newAddress)
     {
       _name = newName;
       _number = newNumber;
       _address = newAddress;
+      _allContacts.Add(this);
+      _id = _allContacts.Count;
       _contactInfo.Add(newNumber);
       _contactInfo.Add(newAddress);
     }
@@ -32,23 +34,15 @@ namespace Contact.Object
     {
       return _address;
     }
-    public void SetID()
-    {
-      _id = _allContacts.Count;
-    }
     public static List<Contact> GetAll()
     {
       return _allContacts;
-    }
-    public void AddToList()
-    {
-      _allContacts.Add(this);
     }
     public static Contact Find(int searchId)
     {
       return _allContacts[searchId - 1];
     }
-    public List<string> GetInfo()
+    public static List<string> GetInfo()
     {
       return _contactInfo;
     }
