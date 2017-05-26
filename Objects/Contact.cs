@@ -29,5 +29,9 @@ namespace Contact.Object
     {
       return _address;
     }
+    public static List<Contact> GetAll()
+    {
+      return _allContacts;
+    }
   }
 }
