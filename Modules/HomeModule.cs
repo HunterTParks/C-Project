@@ -12,7 +12,8 @@ namespace Contact.Object
       };
       Post["/contacts/new"] = _ => {
         Contact newContact = new Contact(Request.Form["new-name"], Request.Form["new-number"], Request.Form["new-address"]);
-        return View["confirmation.cshtml"];
+        newContact.AddToList();
+        return View["confirmation.cshtml", newContact];
       };
     }
   }
